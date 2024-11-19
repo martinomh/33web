@@ -16,9 +16,9 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            flex-direction: column; /* Disposizione verticale */
+            justify-content: space-between; /* Spaziatura tra gli elementi */
+            min-height: 100vh; /* Riempie tutta l'altezza */
             background-color: #d1d9d6;
             color: #333;
         }
@@ -58,6 +58,22 @@
         .cta-button:hover {
             background-color: #005bb5;
         }
+		
+        /* Footer styling */
+        footer {
+            background-color: #333; /* Manteniamo lo sfondo scuro */
+            color: #d1d9d6;
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 0.9em;
+            width: 100%; /* Forza il footer a occupare tutta la larghezza */
+        }
+
+        footer p {
+            margin: 5px 0;
+            line-height: 1.5;
+            color: #d1d9d6;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +88,13 @@
         <!-- Call to action -->
         <a href="mailto:info@33web.it" class="cta-button">Contattaci</a>
     </div>
+	
+    <!-- Footer -->
+    <footer>
+        <p>33web di Elisa Poli</p>
+        <p>Via Mosna di Vigolo 14/A, 38123 Trento</p>
+        <p>CF: PLOLSE82E50L378C | PI: IT02773780222</p>
+    </footer>
 
 </body>
 </html>
