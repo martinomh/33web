@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->
-	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="manifest" href="site.webmanifest">
-	<link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
     <title>33web - Coming Soon</title>
     <style>
         /* Reset margini */
@@ -22,36 +21,100 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            flex-direction: column; /* Disposizione verticale */
-            justify-content: space-between; /* Spaziatura tra gli elementi */
-            min-height: 100vh; /* Riempie tutta l'altezza */
+            flex-direction: column;
+            min-height: 100vh;
             background-color: #d1d9d6;
             color: #333;
         }
 
-        .container {
+        .navbar {
+            background-color: #1d3440;
+            color: #fff;
             display: flex;
-            flex-direction: column;
-            align-items: center; /* Centra il contenuto orizzontalmente */
-            justify-content: center; /* Centra il contenuto verticalmente */
-            flex-grow: 1; /* Espandi per occupare tutto lo spazio */
-            text-align: center;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
         }
 
-        .logo {
-            width: 150px;
-            margin-bottom: 20px;
+        .navbar .logo img {
+            width: 50px; /* Dimensione del logo nella navbar */
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hamburger menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #1d3440;
+            padding: 20px;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+        }
+
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        /* Header image styling */
+        .header-image {
+            width: 100%;
+            height: 300px;
+            background-image: url('header-image.jpg'); /* Percorso dell'immagine */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Main content */
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
         }
 
         h1 {
             font-size: 2em;
-            color: #333;
             margin-bottom: 10px;
         }
 
         p {
             font-size: 1.1em;
-            color: #555;
             margin-bottom: 20px;
         }
 
@@ -68,43 +131,75 @@
         .cta-button:hover {
             background-color: #005bb5;
         }
-		
-        /* Footer styling */
+
         footer {
-            background-color: #333; /* Manteniamo lo sfondo scuro */
+            background-color: #1d3440;
             color: #d1d9d6;
             text-align: center;
-            padding: 20px 10px;
+            padding: 20px;
             font-size: 0.9em;
-            width: 100%; /* Forza il footer a occupare tutta la larghezza */
         }
 
-        footer p {
-            margin: 5px 0;
-            line-height: 1.5;
-            color: #d1d9d6;
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+
+            hamburger.addEventListener('click', function () {
+                mobileMenu.style.display = mobileMenu.style.display === 'flex' ? 'none' : 'flex';
+            });
+        });
+    </script>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="33web Logo"></a>
+        </div>
+        <ul>
+            <li><a href="#about">Chi siamo</a></li>
+            <li><a href="#services">Servizi</a></li>
+        </ul>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
 
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <a href="#about">Chi siamo</a>
+        <a href="#services">Servizi</a>
+    </div>
+
+    <!-- Header image -->
+    <div class="header-image"></div>
+
+    <!-- Main content -->
     <div class="container">
-        <!-- Logo - Sostituisci il percorso con quello corretto del tuo logo -->
-        <img src="logo.png" alt="33web Logo" class="logo">
-
         <h1>Benvenuti in 33web</h1>
         <p>Il nostro sito è in arrivo! Stiamo lavorando per offrirvi la migliore esperienza possibile.</p>
-
-        <!-- Call to action -->
         <a href="mailto:info@33web.it" class="cta-button">Contattaci</a>
     </div>
-	
+
     <!-- Footer -->
     <footer>
         <p>33web di Elisa Poli</p>
         <p>Via Mosna di Vigolo 14/A, 38123 Trento</p>
         <p>CF: PLOLSE82E50L378C | PI: IT02773780222</p>
     </footer>
-
 </body>
 </html>
