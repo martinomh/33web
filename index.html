@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" href="favicon.ico">
-    <title>33web - Coming Soon</title>
+    <title>33web | Studio di consulenza marketing online</title>
     <style>
         /* Reset margini */
         * {
@@ -37,7 +37,7 @@
         }
 
         .navbar .logo img {
-            width: 50px; /* Dimensione del logo nella navbar */
+            width: 50px;
         }
 
         .navbar ul {
@@ -55,6 +55,40 @@
         .navbar ul li a:hover {
             text-decoration: underline;
         }
+		
+		/* Desktop menu */
+	    .menu {
+			display: flex;
+			justify-content: space-between;
+			flex: 1;
+			margin-left: 20px;
+		}
+
+		.services-menu {
+			display: flex;
+			list-style: none;
+			gap: 20px;
+		}
+
+		.utility-menu {
+			display: flex;
+			list-style: none;
+			gap: 20px;
+			margin-left: auto; /* Spinge il menu di servizio a destra */
+		}
+
+		.services-menu li a,
+		.utility-menu li a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 1em;
+			padding: 5px 10px;
+		}
+
+		.services-menu li a:hover,
+		.utility-menu li a:hover {
+			text-decoration: underline;
+		}
 
         /* Hamburger menu */
         .hamburger {
@@ -80,6 +114,7 @@
             top: 60px;
             left: 0;
             width: 100%;
+            z-index: 1000;
         }
 
         .mobile-menu a {
@@ -92,7 +127,7 @@
         .header-image {
             width: 100%;
             height: 300px;
-            background-image: url('header-image.jpg'); /* Percorso dell'immagine */
+            background-image: url('header-image.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -102,7 +137,6 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
@@ -132,15 +166,69 @@
             background-color: #005bb5;
         }
 
-        footer {
-            background-color: #1d3440;
-            color: #d1d9d6;
-            text-align: center;
+        /* Service boxes */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
-            font-size: 0.9em;
         }
 
-        /* Responsive styles */
+        .service-box {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 22%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Mantiene il bottone in basso */
+            position: relative;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            min-height: 200px; /* Altezza minima uniforme */
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 15px;
+            flex-grow: 1; /* Mantiene il testo sopra il bottone */
+        }
+
+        .service-box a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 15px; /* Posiziona in basso */
+            right: 15px; /* Posiziona a destra */
+            background-color: #1d3440;
+            color: #fff;
+            font-size: 1.2em; /* Dimensione adeguata per il simbolo */
+            text-decoration: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            transition: background-color 0.3s;
+        }
+
+        .service-box a:hover {
+            background-color: #005bb5;
+        }
+
         @media (max-width: 768px) {
             .navbar ul {
                 display: none;
@@ -149,6 +237,18 @@
             .hamburger {
                 display: flex;
             }
+
+            .service-box {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background-color: #1d3440;
+            color: #d1d9d6;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
         }
     </style>
     <script>
@@ -165,24 +265,35 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="33web Logo"></a>
-        </div>
-        <ul>
-            <li><a href="#about">Chi siamo</a></li>
-            <li><a href="#services">Servizi</a></li>
+    <div class="logo">
+        <a href="index.html"><img src="logo.png" alt="33web Logo"></a>
+    </div>
+    <div class="menu">
+        <ul class="services-menu">
+            <li><a href="#search-marketing">Search Marketing</a></li>
+            <li><a href="#ecommerce">Ecommerce</a></li>
+            <li><a href="#social-media">Social Media</a></li>
+            <li><a href="#digital-analytics">Digital Analytics</a></li>
         </ul>
-        <div class="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <ul class="utility-menu">
+            <li><a href="#about">Chi siamo</a></li>
+        </ul>
+    </div>
+    <div class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     </nav>
+
 
     <!-- Mobile menu -->
     <div class="mobile-menu">
         <a href="#about">Chi siamo</a>
-        <a href="#services">Servizi</a>
+        <a href="#services">Search Marketing</a>
+		<a href="#services">Ecommerce</a>
+		<a href="#services">Social Media</a>
+		<a href="#services">Digital Analytics</a>
     </div>
 
     <!-- Header image -->
@@ -190,9 +301,33 @@
 
     <!-- Main content -->
     <div class="container">
-        <h1>Benvenuti in 33web</h1>
-        <p>Il nostro sito è in arrivo! Stiamo lavorando per offrirvi la migliore esperienza possibile.</p>
+        <h1>Siamo esperti di comunicazione online</h1>
+        <p>33web è uno studio di consulenti di marketing online, specializzati in comunicazione sui motori di ricerca, ecommerce, social media e digital analytics.</p>
         <a href="mailto:info@33web.it" class="cta-button">Contattaci</a>
+    </div>
+
+    <!-- Services section -->
+    <div class="services">
+        <div class="service-box">
+            <h3>Search Marketing</h3>
+            <p>Strategie di posizionamento e visibilità nei motori di ricerca.</p>
+            <a href="#">></a>
+        </div>
+        <div class="service-box">
+            <h3>Ecommerce</h3>
+            <p>Soluzioni per il tuo negozio online e strategie di vendita.</p>
+            <a href="#">></a>
+        </div>
+        <div class="service-box">
+            <h3>Social Media</h3>
+            <p>Piani editoriali e gestione delle piattaforme social.</p>
+            <a href="#">></a>
+        </div>
+        <div class="service-box">
+            <h3>Digital Analytics</h3>
+            <p>Analisi dei dati per ottimizzare le tue strategie digitali.</p>
+            <a href="#">></a>
+        </div>
     </div>
 
     <!-- Footer -->
