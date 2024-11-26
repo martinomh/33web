@@ -28,13 +28,19 @@
         }
 
         .navbar {
-            background-color: #1d3440;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
+			background-color: #1d3440;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 10px 20px;
+			position: fixed; /* Mantiene la navbar fissa */
+			top: 0; /* Posiziona la navbar in alto */
+			left: 0;
+			width: 100%; /* Estende la navbar a tutta la larghezza */
+			z-index: 1000; /* Assicura che la navbar sia sopra gli altri elementi */
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per separarla dal contenuto */
+		}
 
         .navbar .logo img {
             width: 50px;
@@ -130,6 +136,7 @@
             background-image: url('header-image.jpg');
             background-size: cover;
             background-position: center;
+			margin-top: 60px; /* Aggiunge spazio per compensare l'altezza della navbar */
         }
 
         /* Main content */
@@ -233,18 +240,29 @@
         }
 
         @media (max-width: 768px) {
-            .navbar ul {
-                display: none;
-            }
+			.navbar ul {
+				display: none;
+			}
 
-            .hamburger {
-                display: flex;
-            }
+			.hamburger {
+				display: flex;
+			}
+	
+			.service-box {
+				width: 100%;
+			}
 
-            .service-box {
-                width: 100%;
-            }
-        }
+		}
+
+		/* Regole aggiuntive per breakpoint tra 1024px e 768px */
+		@media (min-width: 769px) and (max-width: 1024px) {
+			.service-box {
+				width: 45%;
+			}
+			.navbar ul li a {
+				font-size: 0.9em;
+			}
+		}
 
         footer {
             background-color: #1d3440;
