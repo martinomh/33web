@@ -138,7 +138,30 @@
             background-size: cover;
             background-position: center;
 			margin-top: 60px; /* Aggiunge spazio per compensare l'altezza della navbar */
+			position: relative; /* Assicurati che sia relativa per il posizionamento assoluto del logo */
         }
+		
+		.header-logo {
+			position: absolute;
+			top: 40%; /* Porta il logo più in alto */
+			left: 50%;
+			transform: translate(-50%, -30%); /* Centra il logo orizzontalmente e lo sposta verticalmente */
+			text-align: center;
+			z-index: 10; /* Assicura che il logo sia visibile sopra l'immagine */
+		}
+
+		.header-logo img {
+			width: 80px; /* Dimensione del logo */
+			height: auto;
+			margin-bottom: 10px;
+		}
+
+		.header-logo .subtitle {
+			font-size: 3em;
+			font-weight: bold;
+			color: #fff;
+			text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Per maggiore leggibilità su sfondi colorati */
+		}
 
         /* Main content */
         .container {
@@ -339,7 +362,12 @@
     </div>
 
     <!-- Header image -->
-    <div class="header-image"></div>
+    <div class="header-image">
+		<div class="header-logo">
+			<img src="images/logo.png" alt="33web Logo">
+			<p class="subtitle">33web</p>
+		</div>
+	</div>
 
     <!-- Main content -->
     <div class="container">
