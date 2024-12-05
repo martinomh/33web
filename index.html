@@ -212,33 +212,44 @@
         }
 
         .service-box p {
-            font-size: 1em;
+            font-size: 1.1em;
             color: #555;
-            margin-bottom: 15px;
+            margin: 15px 0 40px; /* Spazio aggiuntivo sotto il paragrafo */
             flex-grow: 1; /* Mantiene il testo sopra il bottone */
         }
 
-        .service-box a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            bottom: 15px; /* Posiziona in basso */
-            right: 15px; /* Posiziona a destra */
-            background-color: #1d3440;
-            color: #fff;
-            font-size: 1.2em; /* Dimensione adeguata per il simbolo */
-            text-decoration: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            transition: background-color 0.3s;
-			padding-bottom: 5px;
-        }
+		.service-box a {
+			position: absolute;
+			bottom: 10px; /* Sposta il link verso il basso */
+			right: 15px; /* Mantiene la posizione a destra */
+			background-color: #1d3440;
+			color: #fff;
+			font-size: 1.2em;
+			text-decoration: none;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background-color 0.3s;
+		}
 
-        .service-box a:hover {
-            background-color: #005bb5;
-        }
+		.service-box a:hover {
+			background-color: #005bb5;
+		}
+		
+		.service-header {
+			display: flex;
+			align-items: center; /* Allinea verticalmente l'icona e il testo */
+			gap: 10px; /* Spazio tra l'icona e il titolo */
+			height: 80px; /* Altezza fissa */
+		}	
+
+		.service-icon {
+			width: 60px; /* Dimensione dell'icona */
+			height: auto; /* Mantiene le proporzioni */
+		}
 
         @media (max-width: 768px) {
 			.navbar ul {
@@ -255,8 +266,8 @@
 
 		}
 
-		/* Regole aggiuntive per breakpoint tra 1024px e 768px */
-		@media (min-width: 769px) and (max-width: 1024px) {
+		/* Regole aggiuntive per breakpoint tra 1300px e 768px */
+		@media (min-width: 769px) and (max-width: 1300px) {
 			.service-box {
 				width: 45%;
 			}
@@ -339,28 +350,46 @@
     </div>
 
     <!-- Services section -->
-    <div class="services">
-        <div class="service-box">
+	<div class="services">
+	
+    <div class="service-box">
+        <div class="service-header">
+            <img src="loupe_256.png" alt="Search Marketing Icon" class="service-icon">
             <h3>Search Marketing</h3>
-            <p>Strategie di posizionamento e visibilità nei motori di ricerca.</p>
-            <a href="#">></a>
         </div>
-        <div class="service-box">
-            <h3>Ecommerce</h3>
-            <p>Soluzioni per il tuo negozio online e strategie di vendita.</p>
-            <a href="#">></a>
-        </div>
-        <div class="service-box">
-            <h3>Social Media</h3>
-            <p>Piani editoriali e gestione delle piattaforme social.</p>
-            <a href="#">></a>
-        </div>
-        <div class="service-box">
-            <h3>Digital Analytics</h3>
-            <p>Analisi dei dati per ottimizzare le tue strategie digitali.</p>
-            <a href="#">></a>
-        </div>
+        <p>Strategie di posizionamento e visibilità nei motori di ricerca.</p>
+        <a href="#">></a>
     </div>
+
+    <div class="service-box">
+        <div class="service-header">
+            <img src="promotion_256.png" alt="Ecommerce Icon" class="service-icon">
+            <h3>Ecommerce</h3>
+        </div>
+        <p>Soluzioni per il tuo negozio online e strategie di vendita.</p>
+        <a href="#">></a>
+    </div>
+
+    <div class="service-box">
+        <div class="service-header">
+            <img src="chat_256.png" alt="Social Media Icon" class="service-icon">
+            <h3>Social Media</h3>
+        </div>
+        <p>Piani editoriali e gestione delle piattaforme social.</p>
+        <a href="#">></a>
+    </div>
+
+    <div class="service-box">
+        <div class="service-header">
+            <img src="analytics_256.png" alt="Digital Analytics Icon" class="service-icon">
+            <h3>Digital Analytics</h3>
+        </div>
+        <p>Analisi dei dati per ottimizzare le tue strategie digitali.</p>
+        <a href="#">></a>
+    </div>
+	
+	</div>
+
 
     <!-- Footer -->
     <footer>
