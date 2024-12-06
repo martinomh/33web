@@ -55,10 +55,73 @@
         width: 100%;
     }
 	
+	/* Submenu */
+	.submenu {
+		position: absolute;
+		top: 100%;
+		left: -10px;
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 20px 0 10px 0;
+		background-color: #1d3440;
+		border-radius: 5px;
+		/* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+		width: 250px;
+	}
+	
+	.submenu li {
+		margin: 5px 0;
+		padding: 10px; /* Aggiunge spaziatura */
+	}
+	
+	.submenu li a {
+		color: #fff;
+		text-decoration: none;
+		font-size: 1em;
+		display: block;
+		width: 100%; /* Per prendere tutta la larghezza */
+	}
+	
+	.submenu li a:hover {
+		text-decoration: underline;
+	}
+	
+	/* Mostra il submenu al passaggio del mouse (solo su desktop) */
+	@media (min-width: 769px) {
+		.nav-primary li:hover .submenu {
+			display: block;
+		}
+	}
+	
+	/* Mobile: il submenu è già visibile */
+	@media (max-width: 768px) {
+		.submenu {
+			display: block; /* Già esploso */
+			position: static;
+			background-color: transparent;
+			padding: 10px 10px 0 10px;
+			box-shadow: none;
+		}
+	
+		.submenu li {
+			margin: 0; /* Niente margini tra le voci */
+			padding: 15px 0; /* Spazio verticale all'interno delle voci */
+		}
+		
+		/* Rimuovi o riduci la spaziatura dopo l'ultima voce del submenu */
+		.submenu li:last-child {
+			padding-bottom: 0; 
+		}
+
+		.submenu li a {
+			display: block;
+			padding: 0 10px; /* Un po' di spazio orizzontale così non è tutto attaccato a sinistra */
+		}
+	}
+	
 	.nav-links ul {
 		list-style: none; /* Rimuove i marcatori */
-		margin: 0; /* Rimuove margini predefiniti */
-		padding: 0; /* Rimuove padding predefinito */
 	}
 
     /* Menu link (nav-links) di default nascosti (mobile-first) */
@@ -133,7 +196,11 @@
         .nav-primary {
             margin-right: auto;
         }
-
+		
+		.nav-primary li {
+			position: relative;
+		}
+		
         .nav-secondary {
             margin-left: auto;
         }
@@ -155,7 +222,7 @@
     /* Regole aggiuntive per schermi medi */
     @media (min-width: 769px) and (max-width: 1300px) {
         .nav-links li a {
-            font-size: 0.9em;
+            font-size: 1em;
         }
     }
 
@@ -416,13 +483,27 @@
     <div class="menu">
 		<div class="nav-links">
 			<ul class="nav-primary">
-				<li><a href="#search-marketing">Search Marketing</a></li>
-				<li><a href="#ecommerce">Ecommerce</a></li>
-				<li><a href="#social-media">Social Media</a></li>
-				<li><a href="#digital-analytics">Digital Analytics</a></li>
+				<li>
+					<a href="#search-marketing">Search Marketing</a>
+					<ul class="submenu">
+						<li><a href="#seo">Ottimizzazione (SEO)</a></li>
+						<li><a href="#ppc">Campagne PPC</a></li>
+					</ul>				
+				</li>
+				<li>
+					<a href="#ecommerce">Ecommerce</a>
+				</li>
+				<li>
+					<a href="#social-media">Social Media</a>
+				</li>
+				<li>
+					<a href="#digital-analytics">Digital Analytics</a>
+				</li>
 			</ul>
 			<ul class="nav-secondary">
-				<li><a href="#about">Chi siamo</a></li>
+				<li>
+					<a href="#about">Chi siamo</a>
+				</li>
 			</ul>
 		</div>
 	</div>
