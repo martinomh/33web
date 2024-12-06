@@ -399,21 +399,8 @@
 			const hamburger = document.querySelector('.hamburger');
 			const navLinks = document.querySelector('.nav-links');
 		
-			if (!hamburger) {
-				console.error("Elemento .hamburger non trovato nel DOM.");
-				return;
-			}
-		
-			if (!navLinks) {
-				console.error("Elemento .nav-links non trovato nel DOM.");
-				return;
-			}
-		
-			console.log("Entrambi gli elementi trovati.");
-		
 			hamburger.addEventListener('click', function () {
 				navLinks.classList.toggle('active');
-				console.log("Classe 'active' togglata:", navLinks.classList.contains('active'));
 			});
 		});
 
