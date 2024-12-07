@@ -233,13 +233,6 @@
         }
     }
 
-    /* Regole aggiuntive per schermi medi */
-    @media (min-width: 769px) and (max-width: 1300px) {
-        .nav-links li a {
-            font-size: 1em;
-        }
-    }
-
     /* Header image styling */
     .header-image {
         width: 100%;
@@ -311,12 +304,26 @@
 
     /* Service boxes */
     .services {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 20px;
-    }
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center; /* Centra il testo del titolo */
+		padding: 20px;
+	}
+	
+	.services h2 {
+		font-size: 2em;
+		margin-bottom: 20px;
+		color: #333;
+	}
+	
+	.services-boxes {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		width: 100%; /* Per far sì che i box si posizionino correttamente al centro */
+	}
 
     .service-box {
         background-color: #fff;
@@ -382,6 +389,24 @@
     .service-icon {
         width: 60px;
         height: auto;
+    }
+	
+	.services h2 {
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: 20px;
+		color: #333;
+	}
+
+	/* Regole aggiuntive per schermi medi */
+    @media (min-width: 769px) and (max-width: 1300px) {
+        .nav-links li a {
+            font-size: 1em;
+        }
+		
+		.service-box {
+			width: 45%; /* Circa la metà, così ne entrano due affiancati */
+		}
     }
 
     /* Responsive servizi */
@@ -548,42 +573,44 @@
 
     <!-- Services section -->
 	<div class="services">
+	<h2>Quello che sappiamo fare meglio</h2>
+	<div class="services-boxes">
+		<div class="service-box">
+			<div class="service-header">
+				<img src="images/loupe_256.png" alt="Search Marketing Icon" class="service-icon">
+				<h3>Search Marketing</h3>
+			</div>
+			<p>Strategie di posizionamento e visibilità nei motori di ricerca.</p>
+			<a href="#">></a>
+		</div>
 	
-    <div class="service-box">
-        <div class="service-header">
-            <img src="images/loupe_256.png" alt="Search Marketing Icon" class="service-icon">
-            <h3>Search Marketing</h3>
-        </div>
-        <p>Strategie di posizionamento e visibilità nei motori di ricerca.</p>
-        <a href="#">></a>
-    </div>
+		<div class="service-box">
+			<div class="service-header">
+				<img src="images/promotion_256.png" alt="Ecommerce Icon" class="service-icon">
+				<h3>Ecommerce</h3>
+			</div>
+			<p>Soluzioni per il tuo negozio online e strategie di vendita.</p>
+			<a href="#">></a>
+		</div>
+	
+		<div class="service-box">
+			<div class="service-header">
+				<img src="images/chat_256.png" alt="Social Media Icon" class="service-icon">
+				<h3>Social Media</h3>
+			</div>
+			<p>Piani editoriali e consulenza gestione piattaforme social.</p>
+			<a href="#">></a>
+		</div>
 
-    <div class="service-box">
-        <div class="service-header">
-            <img src="images/promotion_256.png" alt="Ecommerce Icon" class="service-icon">
-            <h3>Ecommerce</h3>
-        </div>
-        <p>Soluzioni per il tuo negozio online e strategie di vendita.</p>
-        <a href="#">></a>
-    </div>
-
-    <div class="service-box">
-        <div class="service-header">
-            <img src="images/chat_256.png" alt="Social Media Icon" class="service-icon">
-            <h3>Social Media</h3>
-        </div>
-        <p>Piani editoriali e consulenza gestione piattaforme social.</p>
-        <a href="#">></a>
-    </div>
-
-    <div class="service-box">
-        <div class="service-header">
-            <img src="images/analytics_256.png" alt="Digital Analytics Icon" class="service-icon">
-            <h3>Digital Analytics</h3>
-        </div>
-        <p>Analisi dei dati per ottimizzare le tue strategie digitali.</p>
-        <a href="#">></a>
-    </div>
+		<div class="service-box">
+			<div class="service-header">
+				<img src="images/analytics_256.png" alt="Digital Analytics Icon" class="service-icon">
+				<h3>Digital Analytics</h3>
+			</div>
+			<p>Analisi dei dati per ottimizzare le tue strategie digitali.</p>
+			<a href="#">></a>
+		</div>
+	</div>
 	
 	</div>
 
