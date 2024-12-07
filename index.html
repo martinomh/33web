@@ -233,16 +233,29 @@
         }
     }
 
-    /* Header image styling */
-    .header-image {
-        width: 100%;
-        height: 300px;
-        background-image: url('images/header-image-04.jpg');
-        background-size: cover;
-        background-position: center;
-        margin-top: 60px; /* Spazio per la navbar fissa */
-        position: relative;
-    }
+    /* Stile generale per la header-image */
+	.header-image {
+		width: 100%;
+		height: 300px;
+		background-size: cover;
+		background-position: center;
+		margin-top: 60px; /* Spazio per la navbar fissa */
+		position: relative;
+	}
+	
+	/* Immagine di sfondo per dispositivi desktop */
+	@media (min-width: 769px) {
+		.header-image {
+			background-image: url('images/header-image-04.jpg'); /* Immagine desktop */
+		}
+	}
+	
+	/* Immagine di sfondo per dispositivi mobili */
+	@media (max-width: 768px) {
+		.header-image {
+			background-image: url('images/header-image-04_mobile.jpg'); /* Immagine ottimizzata per mobile */
+		}
+	}
 
     .header-logo {
         position: absolute;
