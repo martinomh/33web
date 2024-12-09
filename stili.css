@@ -479,28 +479,37 @@ p {
 
 /* Stili per la pagina Chi siamo */
 
-body.chi-siamo .team-profiles {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+
+@media (min-width: 769px) {
+	body.chi-siamo .team-profiles {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+	
+	body.chi-siamo .team-member {
+		display: flex;
+		gap: 20px;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		padding: 20px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		box-sizing: border-box;
+		margin: 0 auto;
+		width: auto;
+		text-align: left;
+	}	
 }
 
-body.chi-siamo .team-member {
-    display: flex;
-    gap: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: auto;
-    text-align: left;
+@media (max-width: 768px) {
+    .profile-right h3 {
+        text-align: center; /* Titolo al centro solo mobile */
+    }
 }
 
 body.chi-siamo .profile-left {
@@ -508,13 +517,13 @@ body.chi-siamo .profile-left {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    width: 150px;
 }
 
 body.chi-siamo .profile-right {
     flex-grow: 1;
     text-align: left;
 }
+
 
 body.chi-siamo .team-avatar {
     width: 120px;
