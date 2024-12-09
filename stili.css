@@ -245,6 +245,7 @@ a:hover {
     transform: translate(-50%, -30%);
     text-align: center;
     z-index: 10;
+	min-width: 300px;
 }
 
 .header-logo img {
@@ -254,7 +255,7 @@ a:hover {
 }
 
 .header-logo .subtitle {
-    font-size: 2.6em;
+    font-size: 3em;
     font-weight: bold;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
