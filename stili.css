@@ -516,6 +516,7 @@ body.chi-siamo .profile-left {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+	min-width: 130px;
 }
 
 body.chi-siamo .profile-right {
