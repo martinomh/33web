@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
     <link rel="manifest" href="icons/site.webmanifest">
     <link rel="shortcut icon" href="icons/favicon.ico">
-    <title>33web | Studio di consulenza marketing online</title>
+    <title>Chi sono i professionisti dello studio | 33web</title>
 	<meta name="description" content="33web è uno studio di consulenti di marketing online di esperienza più che decennale. Scopri cosa sappiamo fare e chiedici di più!">
 	<!-- Open Graph meta tags -->
 	<meta property="og:title" content="33web | Studio di consulenza marketing online">
@@ -298,7 +298,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        padding: 20px;
+        padding: 40px 20px;
         max-width: 950px;
         margin: auto;
     }
@@ -321,6 +321,9 @@
         text-decoration: none;
         border-radius: 5px;
         transition: background-color 0.3s;
+		display: inline-block;
+		margin-top: 10px;
+		text-align: center;
     }
 
     .cta-button:hover {
@@ -457,28 +460,66 @@
 
     .team-profiles {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+		flex-direction: column;
+		gap: 20px;
+		width: 100%; /* Adatta alla larghezza del viewport */
+		max-width: 1200px; /* Imposta un limite massimo per desktop */
+		margin: 0 auto; /* Centra il contenitore */
+		padding: 0 15px; /* Aggiungi padding per evitare che tocchi i bordi */
+	}
 
     .team-member {
-        background-color: #fff;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        padding: 20px;
-        width: 22%;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
+		display: flex;
+		gap: 20px;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		padding: 20px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		box-sizing: border-box; /* Assicura che padding e border siano inclusi nella larghezza */
+		margin: 0 auto; /* Centra i riquadri */
+	}
+
+	.profile-left {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+		width: 150px; /* Larghezza fissa per l'avatar */
+	}
+	
+	.profile-right {
+		flex-grow: 1;
+		text-align: left;
+	}
+	
+	.profile-right h3 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+		color: #1d3440;
+	}
+	
+	.profile-right p {
+		font-size: 1em;
+		color: #555;
+	}
 
     .team-avatar {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	.contact-icons {
+		display: flex;
+		gap: 10px;
+	}
+	
+	.contact-icons img {
+		width: 24px;
+		height: 24px;
+	}
 
     .team-member h3 {
         font-size: 1.5em;
@@ -489,7 +530,6 @@
     .team-member p {
         font-size: 1em;
         color: #555;
-        margin-bottom: 15px;
     }
 
     .team-cta-text {
@@ -502,11 +542,24 @@
     @media (max-width: 768px) {
         .team-profiles {
             flex-direction: column;
+			padding: 0;
         }
 
         .team-member {
-            width: 100%;
+			flex-direction: column;
+			align-items: center;
+			width: 100%; /* Assicura che i box dei membri occupino tutta la larghezza disponibile */
+			margin: 0 auto 20px; /* Centra i box e aggiungi spazio sotto */
         }
+		
+		.profile-left {
+			width: auto;
+			align-items: center;
+		}
+	
+		.profile-right {
+			text-align: left;
+		}
     }
 
     /* Regole aggiuntive per breakpoint tra 1300px e 768px (già integrate sopra) */
@@ -567,7 +620,7 @@
 			</ul>
 			<ul class="nav-secondary">
 				<li>
-					<a href="chi-siamo.html">Chi siamo</a>
+					<a href="#about">Chi siamo</a>
 				</li>
 			</ul>
 		</div>
@@ -591,78 +644,61 @@
 
     <!-- Main content -->
     <div class="container">
-        <h1>Siamo esperti di comunicazione online</h1>
-        <p>33web è uno studio di consulenti di marketing digitale di esperienza più che decennale. Siamo specializzati in comunicazione e advertising sui motori di ricerca, strategie ed integrazione di sistemi ecommerce, strategie di social media e progettazione sistemi di digital analytics.</p>
-		<p>Scopri cosa sappiamo fare e chiedici di più!</p>
-        <a href="mailto:info@33web.it" class="cta-button">Contattaci</a>
-    </div>
-
-    <!-- Services section -->
-	<div class="services">
-	<h2>Quello che sappiamo fare meglio</h2>
-	<div class="services-boxes">
-		<div class="service-box">
-			<div class="service-header">
-				<img src="images/loupe_64.png" alt="Search Marketing Icon" class="service-icon">
-				<h3>Search Marketing</h3>
-			</div>
-			<p>Strategie di posizionamento e visibilità nei motori di ricerca.</p>
-			<a href="#">></a>
-		</div>
+		<h1>Chi siamo</h1>
+		<p>Scopri chi siamo, cosa ci appassiona e come possiamo aiutarti a crescere nel mondo digitale.</p>
 	
-		<div class="service-box">
-			<div class="service-header">
-				<img src="images/promotion_64.png" alt="Ecommerce Icon" class="service-icon">
-				<h3>Ecommerce</h3>
-			</div>
-			<p>Soluzioni per il tuo negozio online e strategie di vendita.</p>
-			<a href="#">></a>
-		</div>
-	
-		<div class="service-box">
-			<div class="service-header">
-				<img src="images/chat_64.png" alt="Social Media Icon" class="service-icon">
-				<h3>Social Media</h3>
-			</div>
-			<p>Piani editoriali e consulenza gestione piattaforme social.</p>
-			<a href="#">></a>
-		</div>
-
-		<div class="service-box">
-			<div class="service-header">
-				<img src="images/analytics_64.png" alt="Digital Analytics Icon" class="service-icon">
-				<h3>Digital Analytics</h3>
-			</div>
-			<p>Analisi dei dati per ottimizzare le tue strategie digitali.</p>
-			<a href="#">></a>
-		</div>
-	</div>
-	
-	</div>
-
-	<!-- Team Section -->
-	<div class="team">
-		<h2>Esperti al tuo fianco</h2>
 		<div class="team-profiles">
 			<div class="team-member">
-				<img src="images/martino-mosna.jpg" alt="Martino Mosna" class="team-avatar">
-				<h3>Martino Mosna</h3>
-				<p>Consulente di Search Marketing e Digital Analytics</p>
+				<div class="profile-left">
+					<img src="images/martino-mosna.jpg" alt="Martino Mosna" class="team-avatar">
+					<div class="contact-icons">
+						<a href="mailto:martino@33web.it"><img src="images/email.svg" alt="Email"></a>
+						<a href="https://www.linkedin.com/in/martinomosna" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+						<a href="https://bsky.app/profile/martinomosna.com" target="_blank"><img src="images/bluesky.svg" alt="BlueSky"></a>
+					</div>
+				</div>
+				<div class="profile-right">
+					<h3>Martino Mosna</h3>
+					<p>Inizia a lavorare come SEO in agenzia nel 2006, dal 2011 lavora quotidianamente come freelance per agenzie ed aziende.</p>
+					<p>È specialista di <a href="#">Search Marketing</a> perché <a href="#">SEO</a> e <a href="#">Pay Per Click</a> non sono alternative, ma due modi di comunicare sullo stesso canale.</p>
+					<p>Ha ideato “<a href="#">PIKAC</a>“, il metodo di lavoro SEO che parte dalle persone per arrivare ai contenuti senza lasciare nulla al caso.</p>
+					<p>È esperto di <a href="#">digital analytics</a>, perché se ha una connessione HTTP, allora lo puoi misurare. E misurare ciò che serve è il primo passo per migliorare davvero.</p>
+					<p>Infine, ma non per importanza, è orgoglioso membro del collettivo di professionisti <strong>Search Foundry</strong>.</p>
+				</div>
 			</div>
 			<div class="team-member">
-				<img src="images/elisa-poli.jpg" alt="Team Member 2" class="team-avatar">
-				<h3>Elisa Poli</h3>
-				<p>Consulente ecommerce e strategie di vendita</p>
+				<div class="profile-left">
+					<img src="images/elisa-poli.jpg" alt="Elisa Poli" class="team-avatar">
+					<div class="contact-icons">
+						<a href="mailto:elisa@33web.it"><img src="images/email.svg" alt="Email"></a>
+						<a href="#" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+					</div>
+				</div>
+				<div class="profile-right">
+					<h3>Elisa Poli</h3>
+					<p>[Placeholder] Bio in fase di scrittura. Elisa è una figura fondamentale nel team, con competenze che verranno descritte più approfonditamente a breve.</p>
+					<p>[Esempio] Elisa è specializzata in strategie ecommerce e ottimizzazione della user experience. Ha una passione per i dettagli che fanno la differenza nelle vendite online.</p>
+				</div>
 			</div>
 			<div class="team-member">
-				<img src="images/roxana-todea.jpg" alt="Team Member 3" class="team-avatar">
-				<h3>Roxana Todea</h3>
-				<p>Consulente digital strategy e social media</p>
+				<div class="profile-left">
+					<img src="images/roxana-todea.jpg" alt="Roxana Todea" class="team-avatar">
+					<div class="contact-icons">
+						<a href="mailto:roxana@33web.it"><img src="images/email.svg" alt="Email"></a>
+						<a href="#" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+						<a href="#" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+					</div>
+				</div>
+				<div class="profile-right">
+					<h3>Roxana Todea</h3>
+					<p>[Placeholder] Bio in fase di scrittura. Roxana è parte integrante del team, e presto potrai conoscere i dettagli della sua esperienza e delle sue competenze.</p>
+					<p>[Esempio] Roxana si dedica al social media management e alle digital strategies. La sua creatività e capacità di analisi trasformano ogni progetto in un successo.</p>
+				</div>
 			</div>
 		</div>
-		<p class="team-cta-text">Vuoi sapere di più sulle nostre competenze e la nostra storia professionale?</p>
-		<a href="chi-siamo.html" class="cta-button">Scopri chi siamo</a>
-	</div>
+</div>
+
+
 
     <!-- Footer -->
     <footer>
