@@ -513,7 +513,7 @@ p {
 	}	
 }
 
-body.chi-siamo .header-image {
+body.chi-siamo .header-image, body.chi-siamo .footer-image {
     background-image: url('images/bg-chi-siamo.jpg');
 }
 
