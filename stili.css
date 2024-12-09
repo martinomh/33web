@@ -543,6 +543,10 @@ body.chi-siamo .contact-icons img {
 }
 
 /* Footer */
+.bottom {
+	background-color: #f7f7f7;
+}
+
 footer {
     background-color: #1d3440;
     color: #d1d9d6;
