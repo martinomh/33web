@@ -505,10 +505,8 @@ p {
 	}	
 }
 
-@media (max-width: 768px) {
-    .profile-right h3 {
-        text-align: center; /* Titolo al centro solo mobile */
-    }
+body.chi-siamo .header-image {
+    background-image: url('images/bg-chi-siamo.jpg');
 }
 
 body.chi-siamo .profile-left {
@@ -540,6 +538,16 @@ body.chi-siamo .contact-icons {
 body.chi-siamo .contact-icons img {
     width: 24px;
     height: 24px;
+}
+
+@media (max-width: 768px) {
+    .profile-right h3 {
+        text-align: center; /* Titolo al centro solo mobile */
+    }
+	
+	body.chi-siamo .header-image {
+		background-image: url('images/bg-chi-siamo_mobile.jpg');
+	}
 }
 
 /* Footer */
