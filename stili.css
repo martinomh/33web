@@ -526,6 +526,10 @@ body.chi-siamo .header-image, body.chi-siamo .footer-image {
     background-image: url('images/bg-chi-siamo.jpg');
 }
 
+body.search-marketing .header-image, body.search-marketing .footer-image {
+    background-image: url('images/bg-search-marketing.jpg');
+}
+
 body.chi-siamo .profile-left {
     display: flex;
     flex-direction: column;
@@ -564,6 +568,10 @@ body.chi-siamo .contact-icons img {
 	
 	body.chi-siamo .header-image, body.chi-siamo .footer-image {
 		background-image: url('images/bg-chi-siamo_mobile.jpg');
+	}
+	
+	body.search-marketing .header-image, body.search-marketing .footer-image {
+		background-image: url('images/bg-search-marketing_mobile.jpg');
 	}
 }
 
