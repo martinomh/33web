@@ -298,14 +298,23 @@ p {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
-    display: inline-block;
+    display: inline-flex;
     margin-top: 10px;
     text-align: center;
+	align-items: center; /* Allinea l'icona verticalmente con il testo */
+    justify-content: center; /* Centra orizzontalmente icona e testo */
 }
 
 .cta-button:hover {
     background-color: #005bb5;
     text-decoration: none; 
+}
+
+.cta-button svg {
+    vertical-align: middle; /* Allinea l'icona al testo */
+    margin-right: 8px; /* Spazio tra icona e testo */
+    width: 20px; /* Dimensione coerente con il design */
+    height: 20px;
 }
 
 /* Services section */
@@ -557,6 +566,81 @@ body.chi-siamo .contact-icons img {
 		background-image: url('images/bg-chi-siamo_mobile.jpg');
 	}
 }
+
+/* Pagine servizi */
+/* Contenitore principale per i dettagli */
+.service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spaziatura tra i riquadri */
+    width: 100%; /* Occupa tutta la larghezza del contenitore */
+    margin: 20px 0; /* Spaziatura sopra e sotto */
+}
+
+/* Singola card */
+.service-card {
+    background-color: #fff; /* Sfondo bianco */
+    border: 1px solid #ccc; /* Bordo sottile */
+    border-radius: 10px; /* Angoli arrotondati */
+    padding: 20px; /* Spaziatura interna */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombra per effetto di profondità */
+    box-sizing: border-box; /* Assicura che padding e border siano inclusi nella larghezza */
+    text-align: left; /* Testo allineato a sinistra */
+    width: 100%; /* Occupa l'intera larghezza del contenitore */
+}
+
+/* Testo negli elementi h2 e h3 all'interno della card */
+.service-card h2, 
+.service-card h3 {
+    font-size: 1.5em; /* Grandezza del titolo */
+    margin-bottom: 10px; /* Spaziatura sotto il titolo */
+    color: #1d3440; /* Colore del titolo */
+}
+
+/* Stile per i paragrafi */
+.service-card p {
+    font-size: 1.1em; /* Dimensione del testo */
+    color: #555; /* Colore del testo */
+    line-height: 1.5; /* Spaziatura tra le righe */
+    margin-bottom: 15px; /* Spaziatura sotto */
+}
+
+/* Stile per gli elenchi puntati */
+.service-card ul {
+    padding-left: 20px; /* Spazio dai bordi */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.service-card ul li {
+    font-size: 1em;
+    color: #333; /* Colore del testo */
+    margin-bottom: 8px; /* Spaziatura tra gli elementi della lista */
+}
+
+/* Pulsante nella card */
+.service-card .cta-button {
+    display: inline-block;
+    margin-top: 20px; /* Distanza dagli altri elementi */
+}
+
+/* Media query per garantire leggibilità su schermi piccoli */
+@media (max-width: 768px) {
+    .service-card {
+        padding: 15px; /* Riduce il padding */
+    }
+
+    .service-card h2, 
+    .service-card h3 {
+        font-size: 1.2em; /* Riduce la dimensione del titolo */
+    }
+
+    .service-card p {
+        font-size: 1em; /* Testo più piccolo */
+    }
+}
+
+
 
 /* Footer */
 .bottom {
