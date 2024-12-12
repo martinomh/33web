@@ -534,6 +534,10 @@ body.seo .header-image, body.seo .footer-image {
     background-image: url('images/bg-seo.jpg');
 }
 
+body.campagne-ppc .header-image, body.campagne-ppc .footer-image {
+    background-image: url('images/bg-campagne-ppc.jpg');
+}
+
 body.chi-siamo .profile-left {
     display: flex;
     flex-direction: column;
@@ -580,6 +584,10 @@ body.chi-siamo .contact-icons img {
 	
 	body.seo .header-image, body.seo .footer-image {
 		background-image: url('images/bg-seo_mobile.jpg');
+	}
+	
+	body.campagne-ppc .header-image, body.campagne-ppc .footer-image {
+		background-image: url('images/bg-campagne-ppc_mobile.jpg');
 	}
 }
 
