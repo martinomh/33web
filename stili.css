@@ -538,6 +538,10 @@ body.campagne-ppc .header-image, body.campagne-ppc .footer-image {
     background-image: url('images/bg-campagne-ppc.jpg');
 }
 
+body.digital-analytics .header-image, body.digital-analytics .footer-image {
+    background-image: url('images/bg-digital-analytics.jpg');
+}
+
 body.chi-siamo .profile-left {
     display: flex;
     flex-direction: column;
@@ -589,6 +593,10 @@ body.chi-siamo .contact-icons img {
 	body.campagne-ppc .header-image, body.campagne-ppc .footer-image {
 		background-image: url('images/bg-campagne-ppc_mobile.jpg');
 	}
+	
+	body.digital-analytics .header-image, body.digital-analytics .footer-image {
+    background-image: url('images/bg-digital-analytics_mobile.jpg');
+}
 }
 
 /* Pagine servizi */
