@@ -542,6 +542,10 @@ body.digital-analytics .header-image, body.digital-analytics .footer-image {
     background-image: url('images/bg-digital-analytics.jpg');
 }
 
+body.ecommerce .header-image, body.ecommerce .footer-image {
+    background-image: url('images/bg-ecommerce.jpg');
+}
+
 body.chi-siamo .profile-left {
     display: flex;
     flex-direction: column;
@@ -596,7 +600,11 @@ body.chi-siamo .contact-icons img {
 	
 	body.digital-analytics .header-image, body.digital-analytics .footer-image {
     background-image: url('images/bg-digital-analytics_mobile.jpg');
-}
+	}
+	
+	body.ecommerce .header-image, body.ecommerce .footer-image {
+    background-image: url('images/bg-ecommerce_mobile.jpg');
+	}
 }
 
 /* Pagine servizi */
