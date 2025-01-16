@@ -546,6 +546,10 @@ body.ecommerce .header-image, body.ecommerce .footer-image {
     background-image: url('images/bg-ecommerce.jpg');
 }
 
+body.social-media .header-image, body.social-media .footer-image {
+    background-image: url('images/bg-social-media.jpg');
+}
+
 body.chi-siamo .profile-left {
     display: flex;
     flex-direction: column;
@@ -604,6 +608,10 @@ body.chi-siamo .contact-icons img {
 	
 	body.ecommerce .header-image, body.ecommerce .footer-image {
     background-image: url('images/bg-ecommerce_mobile.jpg');
+	}
+	
+	body.social-media .header-image, body.social-media .footer-image {
+    background-image: url('images/bg-social-media_mobile.jpg');
 	}
 }
 
@@ -698,4 +706,10 @@ footer {
 footer p {
     margin-bottom: 5px;
     line-height: 1;
+}
+
+
+
+@media (max-width: 768px) {
+    
 }
