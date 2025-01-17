@@ -550,6 +550,10 @@ body.social-media .header-image, body.social-media .footer-image {
     background-image: url('images/bg-social-media.jpg');
 }
 
+body.campagne-social .header-image, body.campagne-social .footer-image {
+    background-image: url('images/bg-campagne-social.jpg');
+}
+
 body.chi-siamo .profile-left {
     display: flex;
     flex-direction: column;
@@ -612,6 +616,10 @@ body.chi-siamo .contact-icons img {
 	
 	body.social-media .header-image, body.social-media .footer-image {
     background-image: url('images/bg-social-media_mobile.jpg');
+	}
+	
+	body.campagne-social .header-image, body.campagne-social .footer-image {
+    background-image: url('images/bg-campagne-social_mobile.jpg');
 	}
 }
 
