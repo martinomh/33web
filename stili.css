@@ -716,8 +716,13 @@ footer p {
     line-height: 1;
 }
 
+footer a {
+	color: #d1d9d6;
+    text-decoration: none;
+	font-size: 0.8em;
+}
 
-
-@media (max-width: 768px) {
-    
+footer a:hover {
+	color: #d1d9d6;
+    text-decoration: underline;
 }
