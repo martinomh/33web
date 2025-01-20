@@ -341,6 +341,9 @@ p {
 }
 
 .service-box {
+    display: block; /* Rende cliccabile tutto il box */
+    text-decoration: none;
+    color: inherit;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -359,6 +362,7 @@ p {
 .service-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+	text-decoration: none;
 }
 
 .service-box h3 {
@@ -373,7 +377,7 @@ p {
     flex-grow: 1;
 }
 
-.service-box a {
+.service-box .service-cta {
     position: absolute;
     bottom: 10px;
     right: 15px;
@@ -390,8 +394,8 @@ p {
     transition: background-color 0.3s;
 }
 
-.service-box a:hover {
-    background-color: #005bb5;
+.service-box:hover .service-cta {
+	background-color: #005bb5;
 }
 
 .service-header {
@@ -421,6 +425,11 @@ p {
 @media (max-width: 768px) {
     .service-box {
         width: 100%;
+    }
+	
+	.service-box .service-cta {
+        bottom: 15px; /* Aumenta il margine per maggiore leggibilità */
+        right: 20px;
     }
 }
 
